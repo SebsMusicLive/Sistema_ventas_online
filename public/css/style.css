@@ -1,0 +1,13 @@
+/*.container input {
+    display: flex;
+    align-items: center;
+}
+
+
+.bx{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    transform: translateX(-35px);
+}
+*/
