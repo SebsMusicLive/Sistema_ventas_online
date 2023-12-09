@@ -42,20 +42,20 @@ include('../layout/parte1.php');
                                 <form action="../app/controllers/usuarios/create.php" method="post">
                                     <div class="form-group">
                                         <label for="">Nombres</label>
-                                        <input type="text" name="nombres" class="form-control" placeholder="Escriba el nombre del nuevo usuario">
+                                        <input type="text" name="nombres" class="form-control" placeholder="Escriba el nombre del nuevo usuario" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="">Email</label>
-                                        <input type="email" name="email" class="form-control" placeholder="Escriba el correo del nuevo usuario">
+                                        <input type="email" name="email" class="form-control" placeholder="Escriba el correo del nuevo usuario" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="">Contraseña</label>
-                                        <input type="password" name="password_user" class="form-control"><!--<i class="bx bx-show-alt"></i>-->
+                                        <input type="password" name="password_user" class="form-control" required><!--<i class="bx bx-show-alt"></i>-->
                                         
                                     </div>
                                     <div class="form-group">
                                         <label for="">Repita la contraseña</label>
-                                        <input type="password" name="password_repeat" class="form-control"><!--<i class="bx bx-show-alt"></i>-->
+                                        <input type="password" name="password_repeat" class="form-control" required><!--<i class="bx bx-show-alt"></i>-->
                                     </div>
                                     <div class="form-group">
                                         <a href= "index.php" class="btn btn-secondary">Cancelar</a>

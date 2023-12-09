@@ -18,19 +18,5 @@ $URL = "http://localhost/www.sistemasdeventas.com";
 date_default_timezone_set("America/Bogota");
 $fecha_hora = date("y-m-d H:i:s");
 
-if(isset($_SESSION['mensaje'])){
-    $respuesta = $_SESSION['mensaje'];?>
-    <script>
-        Swal.fire({
-            icon: "error",
-            title: "Datos Incorrectos",
-            text: "<?php echo $respuesta; ?>",
-            showConfirmButton: false,
-            timer: 1500
-        });
-        </script>
-        <?php
-        unset($_SESSION['mensaje']);
-    }
 
 ?>

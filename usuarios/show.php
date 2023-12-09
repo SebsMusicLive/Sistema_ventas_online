@@ -67,4 +67,5 @@ include('../app/controllers/usuarios/show_usuario.php');
         </div>
         <!-- /.content-wrapper -->
 
+<?php include('../layout/mensajes.php');?>
 <?php include('../layout/parte2.php');?>
