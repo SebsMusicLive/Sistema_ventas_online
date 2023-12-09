@@ -99,8 +99,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+                        <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+
+
+
+
+
                         <li class="nav-item">
                             <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-users"></i>
@@ -124,6 +128,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </li>
                             </ul>
                         </li>
+
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-address-card"></i>
+                                <p>
+                                    Roles
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="<?php echo $URL; ?>/roles/" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Listado de roles</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?php echo $URL; ?>/roles/create.php" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Creacion de rol</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
                         <li class="nav-item">
                             <a href="<?php echo $URL; ?>/app/controllers/login/cerrarSesion.php" class="nav-link"
                                 style="background-color: #7f0000">
@@ -136,6 +167,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
+
+
+
+                
+
+
+
             </div>
             <!-- /.sidebar -->
         </aside>
