@@ -52,6 +52,9 @@ include('../app/controllers/usuarios/listado_de_usuarios.php');
                                             <center>Email</center>
                                         </th>
                                         <th>
+                                            <center>Rol de usuario</center>
+                                        </th>
+                                        <th>
                                             <center>Acciones</center>
                                         </th>
                                     </tr>
@@ -59,7 +62,7 @@ include('../app/controllers/usuarios/listado_de_usuarios.php');
                                 <tbody>
                                     <?php
                                     $contador = 0;
-                                    foreach ($usuarios_datos as $usuario_dato) { 
+                                    foreach ($usuarios_datos as $usuario_dato) {
                                         $id_usuario = $usuario_dato['id_usuario'];
                                         ?>
                                         <tr>
@@ -74,12 +77,23 @@ include('../app/controllers/usuarios/listado_de_usuarios.php');
                                             <td>
                                                 <?php echo $usuario_dato['email']; ?>
                                             </td>
+
+                                            <td>
+                                                <center>
+                                                    <?php echo $usuario_dato['rol']; ?>
+                                                </center>
+
+                                            </td>
                                             <td>
                                                 <center>
                                                     <div class="btn-group">
-                                                        <a href="show.php?id=<?php echo $id_usuario;?>" type="button" class="btn btn-info"><i class="fa fa-eye"></i> Ver </a>
-                                                        <a href="update.php?id=<?php echo $id_usuario;?>" type="button" class="btn btn-success"><i class="fa fa-pencil-alt"></i> Editar </a>
-                                                        <a href="delete.php?id=<?php echo $id_usuario;?>" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Borrar </a>
+                                                        <a href="show.php?id=<?php echo $id_usuario; ?>" type="button"
+                                                            class="btn btn-info"><i class="fa fa-eye"></i> Ver </a>
+                                                        <a href="update.php?id=<?php echo $id_usuario; ?>" type="button"
+                                                            class="btn btn-success"><i class="fa fa-pencil-alt"></i> Editar
+                                                        </a>
+                                                        <a href="delete.php?id=<?php echo $id_usuario; ?>" type="button"
+                                                            class="btn btn-danger"><i class="fa fa-trash"></i> Borrar </a>
                                                     </div>
                                                 </center>
                                             </td>
@@ -98,6 +112,9 @@ include('../app/controllers/usuarios/listado_de_usuarios.php');
                                         </th>
                                         <th>
                                             <center>Email</center>
+                                        </th>
+                                        <th>
+                                            <center>Rol de usuario</center>
                                         </th>
                                         <th>
                                             <center>Acciones</center>
