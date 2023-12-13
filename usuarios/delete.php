@@ -56,6 +56,12 @@ include('../app/controllers/usuarios/show_usuario.php');
                                         </div>
 
                                         <div class="form-group">
+                                            <label for="">Rol de usuario</label>
+                                            <input type="text" name="rol" class="form-control"
+                                                value="<?php echo $rol ?>" disabled>
+                                        </div>
+
+                                        <div class="form-group">
                                             <a href="index.php" class="btn btn-secondary">Volver</a>
                                             <button class="btn btn-danger">Eliminar</button>
                                         </div>
