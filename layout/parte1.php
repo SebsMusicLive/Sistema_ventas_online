@@ -26,9 +26,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!--<link rel="stylesheet" href="../public/css/style.css">-->
 
     <!-- DataTables -->
-    <link rel="stylesheet" href="<?php echo $URL; ?>/public/templates/AdminLTE-3.2.0/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?php echo $URL; ?>/public/templates/AdminLTE-3.2.0/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?php echo $URL; ?>/public/templates/AdminLTE-3.2.0/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="<?php echo $URL; ?>/public/templates/AdminLTE-3.2.0/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="<?php echo $URL; ?>/public/templates/AdminLTE-3.2.0/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="<?php echo $URL; ?>/public/templates/AdminLTE-3.2.0/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+    <!-- jQuery -->
+    <script src="<?php echo $URL; ?>/public/templates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
 
 </head>
 
@@ -166,7 +172,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="<?php echo $URL; ?>/roles/" class="nav-link ">
+                                    <a href="<?php echo $URL; ?>/categorias/" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Listado de categorías</p>
                                     </a>
@@ -185,13 +191,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="<?php echo $URL; ?>/roles/" class="nav-link ">
+                                    <a href="<?php echo $URL; ?>/almacen/" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Listado de productos</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $URL; ?>/roles/create.php" class="nav-link">
+                                    <a href="<?php echo $URL; ?>/almacen/create.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Agregar producto</p>
                                     </a>
@@ -215,7 +221,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 
-                
+
 
 
 
