@@ -2,6 +2,7 @@
 
 $id_rol_get = $_GET['id'];
 
+
 $sql_roles = "SELECT * FROM tbl_roles where id_rol = '$id_rol_get'";
 $query_roles = $pdo->prepare($sql_roles);
 $query_roles->execute();
