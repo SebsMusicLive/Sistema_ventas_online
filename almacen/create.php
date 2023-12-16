@@ -43,7 +43,7 @@ include('../app/controllers/categorias/listado_de_categorias.php');
                         <div class="card-body" style="display:block;">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form action="../app/controllers/roles/create.php" method="post">
+                                    <form action="../app/controllers/almacen/create.php" method="post" enctype="multipart/form-data">
 
                                         <div class="row">
                                             <div class="col-md-9">
@@ -72,12 +72,15 @@ include('../app/controllers/categorias/listado_de_categorias.php');
                                                             <input type="text" class="form-control"
                                                                 value="<?php echo 'P-' . ceros($contador_de_id_productos); ?>"
                                                                 disabled="disabled">
+
+                                                            <input type="text" name="codigo" id=""value="<?php echo 'P-' . ceros($contador_de_id_productos); ?>" hidden = "hidden">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="">Categoria:</label>
-                                                            <select name="" id="" class="form-control">
+                                                            <div style='display:flex;'>
+                                                            <select name="id_categoria" id="" class="form-control" required = "required">
                                                                 <?php foreach ($categorias_datos as $categoria_dato) { ?>
                                                                     <option
                                                                         value="<?php echo $categoria_dato['id_categoria']; ?>">
@@ -87,12 +90,14 @@ include('../app/controllers/categorias/listado_de_categorias.php');
                                                                 }
                                                                 ?>
                                                             </select>
+                                                            <a href="<?php echo $URL;?>/categorias/" class = "btn btn-primary"><i class="fa fa-plus"></i></a></div>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="">Nombre del producto:</label>
-                                                            <input type="text" class="form-control">
+                                                            <input type="text" name ="nombre" class="form-control" required = "required">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -101,12 +106,13 @@ include('../app/controllers/categorias/listado_de_categorias.php');
                                                         <div class="form-group">
                                                             <label for="">Usuario</label>
                                                             <input type="text" class="form-control" value ="<?php echo $email_sesion;?> "disabled = 'disabled'>
+                                                            <input type="text" name="id_usuario" value="<?php echo $id_usuario_sesion;?>" hidden = "hidden">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="form-group">
                                                             <label for="">Descripción del producto:</label>
-                                                            <textarea name="" id="" cols="30" rows="2"
+                                                            <textarea name="descripcion" id="" cols="30" rows="2"
                                                                 class="form-control"></textarea>
                                                         </div>
                                                     </div>
@@ -115,37 +121,37 @@ include('../app/controllers/categorias/listado_de_categorias.php');
                                                     <div class="col-md-2">
                                                         <div class="form-group">
                                                             <label for="">Stock:</label>
-                                                            <input type="number" class="form-control">
+                                                            <input type="number" name='stock'class="form-control" required = "required">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <label for="">Stock mínimo:</label>
+                                                            <input type="number" name='stock_minimo' class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2">
                                                         <div class="form-group">
                                                             <label for="">Stock máximo:</label>
-                                                            <input type="number" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <label for="">Stock máximo:</label>
-                                                            <input type="number" class="form-control">
+                                                            <input type="number" name='stock_maximo' class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2">
                                                         <div class="form-group">
                                                             <label for="">Precio de compra:</label>
-                                                            <input type="number" class="form-control">
+                                                            <input type="number" name='precio_compra' class="form-control" required = "required">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2">
                                                         <div class="form-group">
                                                             <label for="">Precio de venta:</label>
-                                                            <input type="number" class="form-control">
+                                                            <input type="number" name='precio_venta' class="form-control" required = "required">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2">
                                                         <div class="form-group">
                                                             <label for="">Fecha de ingreso:</label>
-                                                            <input type="date" class="form-control">
+                                                            <input type="date" name="fecha_ingreso" class="form-control" required = "required">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -155,7 +161,7 @@ include('../app/controllers/categorias/listado_de_categorias.php');
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="">Imagen del producto</label>
-                                                    <input type="file" name="" id="file" class="form-control">
+                                                    <input type="file" name="imagen" id="file" class="form-control">
                                                     <br>
                                                     <output id="list"></output>
                                                     <script>
@@ -186,7 +192,7 @@ include('../app/controllers/categorias/listado_de_categorias.php');
                                         <hr>
                                         <div class="form-group">
                                             <a href="index.php" class="btn btn-secondary">Cancelar</a>
-                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                            <button type="submit" class="btn btn-primary">Guardar producto</button>
                                         </div>
                                     </form>
                                 </div>
